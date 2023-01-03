@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 import Collapse from "../components/Collapse/Collapse";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import aboutCollapse from "../components/Collapse/aboutCollapse.json";
+import aboutCollapse from "../data/aboutCollapse.json";
 
 function About() {
   return (

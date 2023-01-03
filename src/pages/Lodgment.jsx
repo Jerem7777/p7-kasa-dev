@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import data from "../data/hotels.json";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -9,9 +9,11 @@ import LodgmentHost from "../components/Lodgment/LodgmentHost";
 import LodgmentRatings from "../components/Lodgment/LodgmentRatings";
 import LodgmentTags from "../components/Lodgment/LodgmentTags";
 import LodgmentTitle from "../components/Lodgment/LodgmentTitle";
+import { useParams } from "react-router-dom";
 
 function Lodgment() {
-  const lodgmentId = window.location.pathname.substring(10);
+  const params = useParams();
+  const lodgmentId = params.id;
   const lodgment = data.find((item) => item.id === lodgmentId);
   if (!lodgment) return <Error />;
 

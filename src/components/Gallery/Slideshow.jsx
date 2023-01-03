@@ -5,7 +5,7 @@ import { ReactComponent as ArrowRight } from "./arrowright.svg";
 
 function Slideshow(props) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const arrayLenght = props.pictures.flatMap((el) => el.pictures).length;
+  const arrayLenght = props.pictures.length;
 
   // Photo précédente //
   function prevSlide() {
